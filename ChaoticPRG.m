@@ -8,6 +8,9 @@ function [ Key ] = ChaoticPRG( StartingPoint,numberOfletters )
 %	Output:
 %		Key= a chaotic random key 
 
+%    Instructor: Nima Farnoodian
+%    Beyhagh Institute of Higher Education
+
 
 xi=StartingPoint;
 originalNumber=0;
