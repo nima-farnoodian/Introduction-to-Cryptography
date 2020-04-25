@@ -1,0 +1,20 @@
+function [ CipherMessage ] = EstreamCipher( FloatKey,Message )
+%   The Estream Cipher is a symmetric encryption function which encrypts
+%   or decrypts a message using key that is indeed a Float Key.
+%   Input Arguments:
+%   message: Message or Encrypted message  
+%   key: the key must be a float ley like 0.012301
+% 
+%       Example{
+%               message='This is a test';
+%               result=OTP(message,key);
+%               } 
+%   Note that "randint" is a function Generating a random binary data stream
+%   Output: Cipher text or plain text
+%   Instructor: Nima Farnoodian
+%   Beyhagh institute of higher education
+len=length(message); % It holds the length of message
+key=ChaoticPRG(FloatKey,length(Message));
+CipherMessage=OTP(key,Message);
+end
+
